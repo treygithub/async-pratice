@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Async Await</title>
+</head>
+<body>
+    <script>
+
+    const second = () => {
+        setTimeout( () =>{
+            console.log('Async request here');
+        },2000)
+    }
+
+    const first = () => {
+        console.log('First console.log');
+        second();
+        const last  = () => { console.log('Last console.log') } 
+        last();
+    }
+
+    first();
+
+    </script>
+</body>
+</html>
