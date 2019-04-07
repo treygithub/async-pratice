@@ -9,6 +9,7 @@
 <body>
     <script>
 
+    /*
     const second = () => {
         setTimeout( () =>{
             console.log('Async request here');
@@ -23,7 +24,14 @@
     }
 
     first();
-
+    */
+    const getId = new Promise( (resolve,reject)=>{
+        setTimeout( ()=>{
+            resolve([123,11,354,78,30]);
+        },1500);
+    });
+    getId.then(res =>console.log(res))
+    .catch(error=>console.log('error'));
     </script>
 </body>
 </html>
